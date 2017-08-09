@@ -68,6 +68,16 @@ let g:airline#themes#moonfly#palette.visual_modified = {
   \ 'airline_c': [ s:white, s:V3[1], 251, s:V3[3] ]
   \ }
 
+" Terminal Mode
+let s:T1 = [ s:black, s:orange, 232, 7 ]
+let s:T2 = s:sect2
+let s:T3 = s:sect3
+let g:airline#themes#moonfly#palette.terminal =
+  \ airline#themes#generate_color_map(s:T1, s:T2, s:T3)
+let g:airline#themes#moonfly#palette.terminal_modified = {
+  \ 'airline_c': [ s:white, s:T3[1], 251, s:T3[3] ]
+  \ }
+
 " Inactive
 let s:IA = s:sect3
 let g:airline#themes#moonfly#palette.inactive =
@@ -88,3 +98,5 @@ let g:airline#themes#moonfly#palette.replace.airline_warning = s:WA
 let g:airline#themes#moonfly#palette.replace_modified.airline_warning = s:WA
 let g:airline#themes#moonfly#palette.visual.airline_warning = s:WA
 let g:airline#themes#moonfly#palette.visual_modified.airline_warning = s:WA
+let g:airline#themes#moonfly#palette.terminal.airline_warning = s:WA
+let g:airline#themes#moonfly#palette.terminal_modified.airline_warning = s:WA
