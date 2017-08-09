@@ -25,48 +25,51 @@ let s:red         = "#ff5454"  " red         = 1
 
 let g:airline#themes#moonfly#palette = {}
 
+let s:sect2 = [ s:white, s:grey237, 251, 237 ]
+let s:sect3 = [ s:grey237, s:grey234, 237, 234 ]
+
 " Normal Mode
-let s:N1 = [ s:black, s:blue, 232, 4 ]
-let s:N2 = [ s:white, s:grey237, 251, 237 ]
-let s:N3 = [ s:grey237, s:grey233, 237, 233 ]
+let s:N1 = [ s:black, s:light_blue, 232, 12 ]
+let s:N2 = s:sect2
+let s:N3 = s:sect3
 let g:airline#themes#moonfly#palette.normal =
   \ airline#themes#generate_color_map(s:N1, s:N2, s:N3)
 let g:airline#themes#moonfly#palette.normal_modified = {
-  \ 'airline_c': [ s:white, s:grey233, 251, 233 ]
+  \ 'airline_c': [ s:white, s:N3[1], 251, s:N3[3] ]
   \ }
 
 " Insert Mooe
 let s:I1 = [ s:black, s:emerald, 232, 10 ]
-let s:I2 = [ s:white, s:grey237, 251, 237 ]
-let s:I3 = [ s:grey237, s:grey233, 237, 233 ]
+let s:I2 = s:sect2
+let s:I3 = s:sect3
 let g:airline#themes#moonfly#palette.insert =
   \ airline#themes#generate_color_map(s:I1, s:I2, s:I3)
 let g:airline#themes#moonfly#palette.insert_modified = {
-  \ 'airline_c': [ s:white, s:grey233, 251, 233 ]
+  \ 'airline_c': [ s:white, s:I3[1], 251, s:I3[3] ]
   \ }
 
 " Replace Mode
 let s:R1 = [ s:black, s:crimson, 232, 9 ]
-let s:R2 = [ s:white, s:grey237, 251, 237 ]
-let s:R3 = [ s:grey237, s:grey233, 237, 233 ]
+let s:R2 = s:sect2
+let s:R3 = s:sect3
 let g:airline#themes#moonfly#palette.replace =
   \ airline#themes#generate_color_map(s:R1, s:R2, s:R3)
 let g:airline#themes#moonfly#palette.replace_modified = {
-  \ 'airline_c': [ s:white, s:grey233, 251, 233 ]
+  \ 'airline_c': [ s:white, s:R3[1], 251, s:R3[3] ]
   \ }
 
 " Visual Mode
 let s:V1 = [ s:black, s:purple, 232, 13 ]
-let s:V2 = [ s:white, s:grey237, 251, 237 ]
-let s:V3 = [ s:grey237, s:grey233, 237, 233 ]
+let s:V2 = s:sect2
+let s:V3 = s:sect3
 let g:airline#themes#moonfly#palette.visual =
   \ airline#themes#generate_color_map(s:V1, s:V2, s:V3)
 let g:airline#themes#moonfly#palette.visual_modified = {
-  \ 'airline_c': [ s:white, s:grey233, 251, 233 ]
+  \ 'airline_c': [ s:white, s:V3[1], 251, s:V3[3] ]
   \ }
 
 " Inactive
-let s:IA = [ s:grey237, s:grey233, 237, 233 ]
+let s:IA = s:sect3
 let g:airline#themes#moonfly#palette.inactive =
   \ airline#themes#generate_color_map(s:IA, s:IA, s:IA)
 
